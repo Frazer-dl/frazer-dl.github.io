@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Industrial Device Manager">
+    <meta name="author" content="Genov K.S. ">
+    <title>IDM</title>
+    <link rel="stylesheet" href="css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="css/bootstrap-reboot.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&amp;subset=cyrillic-ext" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.min.css">
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="container">
+                <ul class="menu">
+                    <li class="menu_item"><a href="#promo" class="menu_link">Главная</a></li>
+                    <li class="menu_item"><a href="#structure" class="menu_link">Архитектура</a></li>
+                    <li class="menu_item"><a href="#ideas" class="menu_link">Идеи</a></li>
+                    <li class="menu_item"><a href="#todo" class="menu_link">Сейчас</a></li>
+                    <li class="menu_item"><a href="#panel" class="menu_link">Управление</a></li>
+                    <li class="menu_item"><a href="#footer" class="menu_link">Контакты</a></li>
+                </ul>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+        <div class="subheader">
+            <div class="container">
+                <div class="row">
+                    <div class="col-6 col-md-4 offset-md-1">
+                        <a href="https://www.gazprom-auto.ru/" class="subheader_logo"><img src="icons/logo.png" alt="logo"></a>
+                        <div class="subheader_official">Промышленные решения</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section class="promo" id="promo">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12 offset-md-0 col-lg-10 offset-lg-1">
+                    <h1 class="promo_header">Промышленный менеджер ресурсов</h1>
+                    <h2 class="promo_subheader">Прототип</h2>
+                    <div class="promo_descr">v 0.1.0</div>
+                    <a href="#panel" class="menu_link"><button class="promo_btn">Начать поиск устройств</button></a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="structure" id="structure">
+        <div class="container">
+            <div class="structure_subheader">Архитектура</div>
+            <div class="structure_divider"></div>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="structure_block">
+                        <div class="structure_item">
+                            <img src="img/structure.PNG" alt="structure" class="structure_img">
+                            <div class="structure_descr">Программа состоит из 3 обособленных модулей. <br> 1 - HDM (hart driver module) - драйвер подключения к ком-порту, отвечает за обмен данными между устройствами и ПК и за автоматический поиск устройств и сохранение в БД, также на это уровне располагаются две базы данных(для трендов и устройств). <br> 2 -  AM (api module) - модуль апи для координации и обработки различных запросов от интерфейса пользователя. <br> 3 - WM (web module) - модуль интерфейса пользователя.</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="structure_block">
+                        <div class="structure_item">
+                            <img src="img/db.PNG" alt="data base" class="structure_img">
+                            <div class="structure_descr">Структура базы данных состоит из трёх основных таблиц и одной вспомогательной. <br> 1 - Device - служит для сохранения данных найденых устройств. <br> 2 - Parameter - служит для хранения значений переменных. <br> 3 - DeviceInfo - служит для хранения информации о приборе</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="ideas" id="ideas">
+        <div class="container">
+            <div class="ideas_subheader">Идеи</div>
+            <div class="structure_divider"></div>
+            <img src="img/ideas.png" alt="ideas">
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="ideas_block">
+                        <div class="ideas_round">
+                        </div>
+                        <div class="ideas_descr">
+                            <div class="ideas_subtitle">Аналитика отказов датчиков</div>
+                            <div class="ideas_text">
+                                Сбор информации по отказам и формирование различных отчётов и рекомендаций в автоматическом режиме.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="ideas_block">
+                        <div class="ideas_round">
+                        </div>
+                        <div class="ideas_descr">
+                            <div class="ideas_subtitle">Автоматическая система составления плановых графиков обслуживания</div>
+                            <div class="ideas_text">
+                                Внедрение системы учёта и планирования текущего, капитального, а также межремонтного обслуживания
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="ideas_block">
+                        <div class="ideas_round">
+                        </div>
+                        <div class="ideas_descr">
+                            <div class="ideas_subtitle">Учёт приборов</div>
+                            <div class="ideas_text">
+                                EAM  система для учёта комплектущих, составления закупочных ведомостей. Учёт и планирование оборудования на срок эксплутации объекта.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="ideas_block">
+                        <div class="ideas_round">
+                        </div>
+                        <div class="ideas_descr">
+                            <div class="ideas_subtitle">Интеграция в SCADA системы</div>
+                            <div class="ideas_text">
+                                По средствам OPC обработка и предоставление различных данных, в том числе аварийных сообщений с датчиков.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="ideas_block">
+                        <div class="ideas_round">
+                        </div>
+                        <div class="ideas_descr">
+                            <div class="ideas_subtitle">Возможность взаимодействия с системой с экрана планшета/телефона</div>
+                            <div class="ideas_text">
+                                Создание гибкой, портативной системы для простого взаимодействия по средствам беспроводной связи с телефонов и планшетов
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="ideas_block">
+                        <div class="ideas_round">
+                        </div>
+                        <div class="ideas_descr">
+                            <div class="ideas_subtitle">Создание эмулятора HART устройств</div>
+                            <div class="ideas_text">
+                                Данное решение будет служить наглядным примером демонстрации функций системы, а также для мониторинга, диагностики и нагрузочного тестирования программы
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="ideas_block">
+                        <div class="ideas_round">
+                        </div>
+                        <div class="ideas_descr">
+                            <div class="ideas_subtitle">Добавление интеграции HART 7</div>
+                            <div class="ideas_text">
+                                Нужно идти в ногу со временеи и поддерживать новые версии протокола
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="ideas_block">
+                        <div class="ideas_round">
+                        </div>
+                        <div class="ideas_descr">
+                            <div class="ideas_subtitle">Интеграция DD файлов</div>
+                            <div class="ideas_text">
+                                Данный алгоритм позволит универсально использовать программу с любым прибором
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="todo" id="todo">
+        <div class="container">
+            <div class="todo_subheader">Текущие задачи</div>
+            <div class="structure_divider"></div>
+            <div class="row">
+                <div class="col-md-8">
+                    <ul>
+                        <li class="todo_text">Добавить списки производителей, типов приборов, инженерных единиц</li>
+                        <li class="todo_text">Откорректировать работу методов в модуле HDM</li>
+                        <li class="todo_text">Популяция БД. Продумать систему хранения изменяющихся параметров. Реализовать хранение в БД Postgres</li>
+                        <li class="todo_text">Осуществить возможность демонстрации прототипа через HMI (JS, React)</li>
+                        <li class="todo_text">Реализовать трансформацию полученных ответов в объекты</li>
+                        <li class="todo_text">Реализовать API с возможностью сохранять/обновлять устройства в ручную</li>
+                        <li class="todo_text">Создать драйвер взаимодействия с com-портом для минимизации затраченного на опрос времени</li>
+                        <li class="todo_text">Логирование пользователя</li>
+                        <li class="todo_text">Обработка ошибок, ведение лога</li>
+                        <li class="todo_text">Транзакции</li>
+                        <li class="todo_text">Кеширование запрашиваемых данных</li>
+                        <li class="todo_text">Тестирование всех функций</li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <img src="img/todo.png" alt="todo">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="panel" id="panel">
+        <div class="container">
+            <div class="panel_subheader">Управление</div>
+            <div class="panel_divider"></div>
+            <div class="row">
+                <div class="col-md-3 center-block">
+                    <div class="panel_icon"><img src="icons/searching.png" alt="searching" class="panel_icon"></div>
+                    <div class="panel_descr">Поиск устройств</div>
+                </div>
+                <div class="col-md-3 center">
+                    <div class="panel_icon"><img src="icons/device.png" alt="device" class="panel_icon"></div>
+                    <div class="panel_descr">Устройства</div>
+                </div>
+                <div class="col-md-3 center">
+                    <div class="panel_icon"><img src="icons/info.png" alt="info" class="panel_icon"></div>
+                    <div class="panel_descr">Информация</div>
+                </div>
+                <div class="col-md-3 center">
+                    <div class="panel_icon"><img src="icons/parameter.png" alt="parameter" class="panel_icon"></div>
+                    <div class="panel_descr">Параметры</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="data">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 data_table">
+                    <div class="data_text">Device</div>
+                    <div class="data_text"></div>
+                    <div class="data_text">Yokogawa EJX</div>
+                    <div class="data_text">Yokogawa DYF</div>
+                </div>
+                <div class="col-md-4 data_table">
+                    <div class="data_text">Device address</div>
+                    <div class="data_text">0</div>
+                    <div class="data_text">1</div>
+                </div>
+                <div class="col-md-4 data_table">
+                    <div class="data_text">Заводской номер</div>
+                    <div class="data_text">12333415</div>
+                    <div class="data_text">1028999112</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="footer" id="footer">
+        <div class="container">
+            <h2 class="footer_header">Контакты</h2>
+            <div class="footer_item">
+                <div class="footer_text">
+                    Константин Генов
+                    <br>
+                    Тел.: +7 985 447 80 69
+                </div>
+            <div class="footer_github">
+                <a href="https://github.com/frazer-dl"><img src="icons/github.png" alt="github" class="footer_github_icon">
+                </a>
+            </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
