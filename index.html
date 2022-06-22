@@ -15,6 +15,7 @@
     
 </head>
 <body>
+    <script type="text/javascript" src="js/scrypt.js"></script>
     <header>
         <nav>
             <div class="container">
@@ -57,24 +58,26 @@
             </div>
         </div>
     </section>
+
     <section class="structure" id="structure">
         <div class="container">
             <div class="structure_subheader">Архитектура</div>
             <div class="structure_divider"></div>
+            <div class="structure_box">
+                <button class="structure_box_btn" type="button" onclick="visibility_structure_1()">Структурная схема</button>
+                <button class="structure_box_btn" type="button" onclick="visibility_structure_2()">Схема базы данных</button>
+            </div>
             <div class="row">
-                <div class="col-md-6">
+                <div class="col-md-12">
                     <div class="structure_block">
                         <div class="structure_item">
-                            <img src="img/structure.PNG" alt="structure" class="structure_img">
-                            <div class="structure_descr">Программа состоит из 3 обособленных модулей. <br> 1 - HDM (hart driver module) - драйвер подключения к ком-порту, отвечает за обмен данными между устройствами и ПК и за автоматический поиск устройств и сохранение в БД, также на это уровне располагаются две базы данных(для трендов и устройств). <br> 2 -  AM (api module) - модуль апи для координации и обработки различных запросов от интерфейса пользователя. <br> 3 - WM (web module) - модуль интерфейса пользователя.</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="structure_block">
-                        <div class="structure_item">
-                            <img src="img/database_structure.PNG" alt="database" class="structure_img">
-                            <div class="structure_descr">Структура базы данных состоит из трёх основных таблиц и одной вспомогательной. <br> 1 - Device - служит для сохранения данных найденых устройств. <br> 2 - Parameter - служит для хранения значений переменных. <br> 3 - DeviceInfo - служит для хранения информации о приборе</div>
+                            <img id="img_id" src="img/structure.PNG"  alt="structure" class="structure_img">
+                            <div class="structure_descr" id="structure_descr_1">
+                                Программа состоит из 3 обособленных модулей. <br> 1 - HDM (hart driver module) - драйвер подключения к ком-порту, отвечает за обмен данными между устройствами и ПК и за автоматический поиск устройств и сохранение в БД, также на это уровне располагаются две базы данных(для трендов и устройств). <br> 2 -  AM (api module) - модуль апи для координации и обработки различных запросов от интерфейса пользователя. <br> 3 - WM (web module) - модуль интерфейса пользователя.
+                            </div>
+                            <div class="structure_descr" id="structure_descr_2">
+                                Структура базы данных состоит из трёх основных таблиц и одной вспомогательной. <br> 1 - Device - служит для сохранения данных найденых устройств. <br> 2 - Parameter - служит для хранения значений переменных. <br> 3 - DeviceInfo - служит для хранения информации о приборе
+                            </div>
                         </div>
                     </div>
                 </div>
