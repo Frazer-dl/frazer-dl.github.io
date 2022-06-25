@@ -37,15 +37,31 @@ window.addEventListener('DOMContentLoaded', () => {
 })
 
 
-  function toggleSlide(item) {
-    $(item).each(function(i) {
-        $(this).on('click', function(e) {
-            e.preventDefault();
-            $('.ideas-item__content').eq(i).toggleClass('ideas-item__content_active');
-            $('.ideas-item__descr').eq(i).toggleClass('ideas-item__descr_active');
-        })
-    });
-  };
+function toggleSlide(item) {
+  $(item).each(function(i) {
+      $(this).on('click', function(e) {
+          e.preventDefault();
+          $('.ideas-item__content').eq(i).toggleClass('ideas-item__content_active');
+          $('.ideas-item__descr').eq(i).toggleClass('ideas-item__descr_active');
+      })
+  });
+};
 
-  toggleSlide('.ideas-item__link');
-  toggleSlide('.ideas-item__back');
+toggleSlide('.ideas-item__link');
+toggleSlide('.ideas-item__back');
+
+// Modal
+
+$('[data-modal=device-info]').on('click', function() {
+    $('.overlay, #device-info').fadeIn('slow');
+});
+$('.modal__close').on('click', function() {
+    $('.overlay, #device-info').fadeOut('slow');
+});
+
+$('.button_mini').each(function(i) {
+    $(this).on('click', function() {
+        $('#device-info .modal__subtitle').text($('row td').eq(i).text());
+        $('.overlay, #device-info').fadeIn('slow');
+    })
+});
