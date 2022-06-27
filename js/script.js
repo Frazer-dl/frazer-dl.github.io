@@ -19,22 +19,22 @@ $(document).ready(function() {
 });
 
 window.addEventListener('DOMContentLoaded', () => {
-  const menu = document.querySelector('.header'),
-  menuItem = document.querySelectorAll('.header__item'),
-  hamburger = document.querySelector('.hamburger');
-
-  hamburger.addEventListener('click', () => {
-      hamburger.classList.toggle('hamburger_active');
-      menu.classList.toggle('header_active');
-  });
-
-  menuItem.forEach(item => {
-      item.addEventListener('click', () => {
-          hamburger.classList.toggle('hamburger_active');
-          menu.classList.toggle('header_active');
-      })
-  })
-})
+    const header = document.querySelector('.header__menu'),
+    headerItem = document.querySelectorAll('.header__menu'),
+    hamburger = document.querySelector('.hamburger');
+  
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('hamburger_active');
+        header.classList.toggle('header__menu_active');
+    });
+  
+    headerItem.forEach(item => {
+        item.addEventListener('click', () => {
+            hamburger.classList.toggle('hamburger_active');
+            header.classList.toggle('header__menu_active');
+        })
+    })
+});
 
 
 function toggleSlide(item) {
